@@ -1,11 +1,11 @@
 from fastapi import APIRouter, FastAPI
-from endpoints import health, ask
+from api.v1.endpoints import health, fag
 
 
 def default_router(app: FastAPI) -> None:
     router = APIRouter(prefix="/api")
 
     router.include_router(health.router, tags=["health"])
-    router.include_router(ask.ask_router, tags=["ask"])
+    router.include_router(fag.fag_router, tags=["FAG"])
 
     app.include_router(router)

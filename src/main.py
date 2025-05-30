@@ -9,10 +9,10 @@ app = FastAPI(
     title="Q&A Service",
     servers=[
         {"url": "/", "description": "Default (Current URL)"},
-        {"url": "http://localhost:8000", "description": "Local"},
+        {"url": "http://localhost:3000", "description": "Local"},
     ],
     openapi_url="/api/doc/v1/docs/openapi.json",
-    docs_url="/api/doc/v1/docs",
+    docs_url="/api/docs",
 )
 
 app.add_middleware(

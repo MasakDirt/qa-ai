@@ -1,8 +1,8 @@
 from fastapi import APIRouter
 
-ask_router = APIRouter()
+fag_router = APIRouter()
 
 
-@ask_router.post(path="/ask", response_model=str)
+@fag_router.post(path="/ask", response_model=str)
 async def process_users_question():
     ...
