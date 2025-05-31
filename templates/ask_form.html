@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ask AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        .answer {
+            padding: 15px;
+            background-color: #fff;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Ask a Question</h2>
+    <form method="post">
+        <label for="question">Your question:</label><br>
+        <textarea name="question" rows="3" placeholder="Type your question here..." required>{{ question or '' }}</textarea><br>
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if answer %}
+    <div class="answer">
+        <strong>Answer:</strong><br>
+        {{ answer }}
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
